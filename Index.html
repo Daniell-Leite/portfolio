@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Portfólio | Daniell Leite</title>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg border-bottom sticky-top bg-body">
+    <nav class="navbar navbar-expand-lg border-bottom sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">Daniell Leite</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item">
                         <a class="nav-link" href="#sobre">Sobre e Experiência</a>
                     </li>
@@ -29,24 +30,32 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <button id="theme-toggle" class="btn btn-sm btn-outline-tavern" type="button">
+                            Tema: Escuro
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="py-5 border-bottom">
+    <!-- Hero com Animação de Fogo no Mouse -->
+    <header id="hero-section" class="py-5 border-bottom">
+        <canvas id="fire-canvas"></canvas>
         <div class="container py-4">
             <div class="row">
                 <div class="col-lg-8">
-                    <p class="text-uppercase text-secondary fw-semibold mb-2">Ciência da Computação & Game Design</p>
+                    <p class="text-uppercase fw-semibold mb-2" style="color: var(--tavern-accent);">
+                        Ciência da Computação & Game Design
+                    </p>
                     <h1 class="display-4 fw-bold mb-3">Daniell Leite</h1>
                     <p class="lead text-body-secondary mb-4">
                         Desenvolvimento de software estruturado em C e Python, arquitetura de bancos de dados e criação de sistemas narrativos e mecânicas para RPG de mesa.
                     </p>
                     <div class="d-flex gap-2">
-                        <a href="#projetos-dev" class="btn btn-primary">Ver Projetos</a>
-                        <a href="#contato" class="btn btn-outline-secondary">Entrar em Contato</a>
+                        <a href="#projetos-dev" class="btn btn-tavern">Ver Projetos</a>
+                        <a href="#contato" class="btn btn-outline-tavern">Entrar em Contato</a>
                     </div>
                 </div>
             </div>
@@ -79,7 +88,6 @@
         <div class="container">
             <h2 class="h3 fw-bold mb-4">Projetos de Desenvolvimento e Ferramentas</h2>
             <div class="row g-4">
-                
                 <div class="col-md-6">
                     <div class="card h-100">
                         <div class="card-body">
@@ -90,7 +98,7 @@
                             </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <a href="#" class="btn btn-sm btn-outline-primary">Ver no GitHub</a>
+                            <a href="#" class="btn btn-sm btn-outline-tavern">Ver no GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -105,11 +113,10 @@
                             </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <a href="#" class="btn btn-sm btn-outline-primary">Ver Documentação</a>
+                            <a href="#" class="btn btn-sm btn-outline-tavern">Ver Documentação</a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -119,11 +126,10 @@
         <div class="container">
             <h2 class="h3 fw-bold mb-4">Game Design, Worldbuilding e Sistemas</h2>
             <div class="row g-4">
-
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <span class="badge text-bg-dark border mb-2">Cenário Autoral</span>
+                            <span class="badge text-bg-secondary mb-2">Cenário Autoral</span>
                             <h3 class="h5 card-title fw-bold">BlackWood</h3>
                             <p class="card-text text-body-secondary">
                                 Cenário de fantasia sombria focado em exploração de masmorras, desenhado com curva de aprendizado acessível para jogadores iniciantes.
@@ -135,7 +141,7 @@
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <span class="badge text-bg-dark border mb-2">Mecânicas & Regras</span>
+                            <span class="badge text-bg-secondary mb-2">Mecânicas & Regras</span>
                             <h3 class="h5 card-title fw-bold">Compêndio de Homebrews</h3>
                             <p class="card-text text-body-secondary">
                                 Criação e balanceamento de itens mágicos, magias e blocos de estatísticas de NPCs para sistemas d20 (D&D 5e e Tormenta 20).
@@ -147,7 +153,7 @@
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <span class="badge text-bg-dark border mb-2">Level Design</span>
+                            <span class="badge text-bg-secondary mb-2">Level Design</span>
                             <h3 class="h5 card-title fw-bold">Mapas Táticos e Documentação</h3>
                             <p class="card-text text-body-secondary">
                                 Design de mapas de batalha em grade e arquitetura de notas modulares em Markdown para gestão de campanhas complexas.
@@ -155,7 +161,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -169,14 +174,101 @@
                     <p class="text-body-secondary mb-0">Disponível para oportunidades em desenvolvimento de software e colaboração em projetos de RPG.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <a href="mailto:seuemail@exemplo.com" class="btn btn-outline-light me-2">E-mail</a>
-                    <a href="#" target="_blank" class="btn btn-outline-light me-2">GitHub</a>
-                    <a href="#" target="_blank" class="btn btn-outline-light">LinkedIn</a>
+                    <a href="mailto:seuemail@exemplo.com" class="btn btn-outline-tavern me-2">E-mail</a>
+                    <a href="#" target="_blank" class="btn btn-outline-tavern me-2">GitHub</a>
+                    <a href="#" target="_blank" class="btn btn-outline-tavern">LinkedIn</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 1. Alternância entre Tema Claro e Escuro
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-bs-theme', newTheme);
+            themeToggleBtn.textContent = newTheme === 'dark' ? 'Tema: Escuro' : 'Tema: Claro';
+        });
+
+        // 2. Animação de Fogo no Mouse (Restrita à Hero)
+        const heroSection = document.getElementById('hero-section');
+        const canvas = document.getElementById('fire-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = heroSection.offsetWidth;
+            canvas.height = heroSection.offsetHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class FireParticle {
+            constructor(x, y) {
+                this.x = x + (Math.random() - 0.5) * 14;
+                this.y = y + (Math.random() - 0.5) * 10;
+                this.size = Math.random() * 8 + 4;
+                this.speedY = Math.random() * -1.8 - 0.6; // Sobe como chama
+                this.speedX = (Math.random() - 0.5) * 1.2;
+                this.life = 1.0;
+                this.decay = Math.random() * 0.03 + 0.02;
+                
+                // Tons pastéis de chama (âmbar, terracota e dourado suave)
+                const colors = [
+                    '235, 156, 110', // Laranja pastel
+                    '217, 114, 91',  // Terracota suave
+                    '245, 203, 134'  // Amarelo vela pastel
+                ];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.size *= 0.96;
+                this.life -= this.decay;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${this.color}, ${this.life * 0.65})`;
+                ctx.fill();
+            }
+        }
+
+        // Captura o movimento do mouse APENAS dentro da Hero
+        heroSection.addEventListener('mousemove', (e) => {
+            const rect = heroSection.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            for (let i = 0; i < 3; i++) {
+                particles.push(new FireParticle(mouseX, mouseY));
+            }
+        });
+
+        function animateFire() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+
+                if (particles[i].life <= 0 || particles[i].size <= 0.5) {
+                    particles.splice(i, 1);
+                    i--;
+                }
+            }
+            requestAnimationFrame(animateFire);
+        }
+
+        animateFire();
+    </script>
 </body>
 </html>
