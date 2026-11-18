@@ -1,55 +1,182 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" rel="stylesheet" type="text/css">
-    <title>Portfolio Daniell </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Portfólio | Daniell Leite</title>
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-        </ul>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg border-bottom sticky-top bg-body">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Daniell Leite</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre e Experiência</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projetos-dev">Desenvolvimento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projetos-rpg">Game Design & RPG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
     </nav>
+
     <!-- Hero -->
-    quem sou e esperiencias
-    Projetos
-    sessão para contato e links de redes sociais
-    
-    
-    <script src="js/bootstrap.bundle.min.js" type="text/javascript">
-    </script>
+    <header class="py-5 border-bottom">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="text-uppercase text-secondary fw-semibold mb-2">Ciência da Computação & Game Design</p>
+                    <h1 class="display-4 fw-bold mb-3">Daniell Leite</h1>
+                    <p class="lead text-body-secondary mb-4">
+                        Desenvolvimento de software estruturado em C e Python, arquitetura de bancos de dados e criação de sistemas narrativos e mecânicas para RPG de mesa.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="#projetos-dev" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contato" class="btn btn-outline-secondary">Entrar em Contato</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quem sou e Experiências -->
+    <section id="sobre" class="py-5 border-bottom">
+        <div class="container">
+            <h2 class="h3 fw-bold mb-4">Sobre Mim e Experiências</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h3 class="h5 fw-semibold">Formação e Tecnologia</h3>
+                    <p class="text-body-secondary">
+                        Graduando em Ciência da Computação pelo Centro Universitário do Distrito Federal (UDF), com foco em programação estruturada (C), automação (Python), bancos de dados relacionais (MySQL) e fundamentos de segurança da informação.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="h5 fw-semibold">Game Mastering e Design de Sistemas</h3>
+                    <p class="text-body-secondary">
+                        Mais de 4 anos de experiência como Mestre de RPG conduzindo campanhas e desenvolvendo regras customizadas para D&D 5e, Tormenta 20 e Ordem Paranormal, aplicando pensamento sistêmico, balanceamento matemático e documentação técnica.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos de Desenvolvimento -->
+    <section id="projetos-dev" class="py-5 border-bottom">
+        <div class="container">
+            <h2 class="h3 fw-bold mb-4">Projetos de Desenvolvimento e Ferramentas</h2>
+            <div class="row g-4">
+                
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge text-bg-secondary mb-2">C / Python / CLI</span>
+                            <h3 class="h5 card-title fw-bold">Gerador Procedural de NPCs (D&D 5e)</h3>
+                            <p class="card-text text-body-secondary">
+                                Ferramenta de linha de comando desenvolvida para agilizar a preparação de sessões, gerando atributos, traços físicos e ganchos narrativos de forma estruturada.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver no GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge text-bg-secondary mb-2">Arquitetura / Lógica</span>
+                            <h3 class="h5 card-title fw-bold">Protótipo de Gestão de Masmorras (NoteQuest)</h3>
+                            <p class="card-text text-body-secondary">
+                                Estruturação lógica para controle híbrido de fichas de personagens, geração procedural de salas e gerenciamento de encontros e monstros.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver Documentação</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos de RPG e Worldbuilding -->
+    <section id="projetos-rpg" class="py-5 border-bottom">
+        <div class="container">
+            <h2 class="h3 fw-bold mb-4">Game Design, Worldbuilding e Sistemas</h2>
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge text-bg-dark border mb-2">Cenário Autoral</span>
+                            <h3 class="h5 card-title fw-bold">BlackWood</h3>
+                            <p class="card-text text-body-secondary">
+                                Cenário de fantasia sombria focado em exploração de masmorras, desenhado com curva de aprendizado acessível para jogadores iniciantes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge text-bg-dark border mb-2">Mecânicas & Regras</span>
+                            <h3 class="h5 card-title fw-bold">Compêndio de Homebrews</h3>
+                            <p class="card-text text-body-secondary">
+                                Criação e balanceamento de itens mágicos, magias e blocos de estatísticas de NPCs para sistemas d20 (D&D 5e e Tormenta 20).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <span class="badge text-bg-dark border mb-2">Level Design</span>
+                            <h3 class="h5 card-title fw-bold">Mapas Táticos e Documentação</h3>
+                            <p class="card-text text-body-secondary">
+                                Design de mapas de batalha em grade e arquitetura de notas modulares em Markdown para gestão de campanhas complexas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato e Redes Sociais -->
+    <footer id="contato" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h2 class="h4 fw-bold">Contato</h2>
+                    <p class="text-body-secondary mb-0">Disponível para oportunidades em desenvolvimento de software e colaboração em projetos de RPG.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="mailto:seuemail@exemplo.com" class="btn btn-outline-light me-2">E-mail</a>
+                    <a href="#" target="_blank" class="btn btn-outline-light me-2">GitHub</a>
+                    <a href="#" target="_blank" class="btn btn-outline-light">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
