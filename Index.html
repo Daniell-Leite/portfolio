@@ -8,7 +8,6 @@
     <title>Portfólio | Daniell Leite</title>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg border-bottom sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">Daniell Leite</a>
@@ -39,15 +38,12 @@
         </div>
     </nav>
 
-    <!-- Hero com Tamanho da Viewport e Foto à Direita -->
     <header id="hero-section" class="viewport-section border-bottom">
         <canvas id="fire-canvas"></canvas>
         <div class="container">
             <div class="row align-items-center g-5">
-                
-                <!-- Coluna da Esquerda: Texto -->
                 <div class="col-lg-7">
-                    <p class="text-uppercase fw-semibold mb-2" style="color: var(--tavern-accent);">
+                    <p class="text-uppercase fw-semibold mb-2 text-tavern">
                         Ciência da Computação & Game Design
                     </p>
                     <h1 class="display-4 fw-bold mb-3">Daniell Leite</h1>
@@ -60,7 +56,6 @@
                     </div>
                 </div>
 
-                <!-- Coluna da Direita: Sua Foto em Molde de Chama -->
                 <div class="col-lg-5 text-center">
                     <div class="hero-flame-wrapper">
                         <div class="hero-flame-border">
@@ -68,12 +63,10 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </header>
 
-    <!-- Quem sou e Experiências -->
     <section id="sobre" class="viewport-section border-bottom">
         <div class="container">
             <h2 class="h3 fw-bold mb-4">Sobre Mim e Experiências</h2>
@@ -87,14 +80,13 @@
                 <div class="col-md-6">
                     <h3 class="h5 fw-semibold">Game Mastering e Design de Sistemas</h3>
                     <p class="text-body-secondary">
-                        Mais de 4 anos de experiência como Mestre de RPG conduzindo campanhas e desenvolvendo regras customizadas para D&D 5e, Tormenta 20 e Ordem Paranormal, aplicando pensamento sistêmico, balanceamento matemático.
+                        Mais de 4 anos de experiência como Mestre de RPG conduzindo campanhas e desenvolvendo regras customizadas para D&D 5e, Tormenta 20 e Ordem Paranormal, aplicando pensamento sistêmico e balanceamento matemático.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projetos de Desenvolvimento -->
     <section id="projetos-dev" class="viewport-section border-bottom">
         <div class="container">
             <h2 class="h3 fw-bold mb-4">Projetos de Desenvolvimento e Ferramentas</h2>
@@ -102,15 +94,17 @@
                 <div class="col-md-6">
                     <div class="card h-100">
                         <div class="card-body">
-                            <span class="badge text-bg-secondary mb-2">C / Python / CLI</span>
-                            <span class="badge border" style="color: var(--tavern-accent); border-color: var(--tavern-accent) !important;">Em andamento</span>
+                            <div class="d-flex flex-wrap gap-2 mb-2">
+                                <span class="badge text-bg-secondary">C / Python / CLI</span>
+                                <span class="badge badge-tavern">Em andamento</span>
+                            </div>
                             <h3 class="h5 card-title fw-bold">Gerador de NPCs (D&D 5e)</h3>
                             <p class="card-text text-body-secondary">
-                                Ferramenta de linha de comando desenvolvida para agilizar a preparação de sessões, gerando atributos, traços físicos e ganchos narrativos de forma estruturada para os NPC's no sistema de D&D5e.
+                                Ferramenta de linha de comando desenvolvida para agilizar a preparação de sessões, gerando atributos, traços físicos e ganchos narrativos de forma estruturada para NPCs no sistema D&D 5e.
                             </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <a href="https://github.com/Daniell-Leite/Gerador-NPCs-D-D5e" class="btn btn-sm btn-outline-tavern">Ver no GitHub</a>
+                            <a href="https://github.com/Daniell-Leite/Gerador-NPCs-D-D5e" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-tavern">Ver no GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -118,10 +112,9 @@
                 <div class="col-md-6">
                     <div class="card h-100">
                         <div class="card-body">
-                            <!-- Linha de Badges: Categoria + Status -->
                             <div class="d-flex flex-wrap gap-2 mb-2">
                                 <span class="badge text-bg-secondary">Arquitetura / Lógica</span>
-                                <span class="badge border" style="color: var(--tavern-accent); border-color: var(--tavern-accent) !important;">Em andamento</span>
+                                <span class="badge badge-tavern">Em andamento</span>
                                 <span class="badge border text-body-secondary">Repositório privado</span>
                             </div>
                             <h3 class="h5 card-title fw-bold">Protótipo de Gestão de Masmorras (Estilo Dungeon Crawl)</h3>
@@ -138,13 +131,10 @@
         </div>
     </section>
 
-    <!-- Projetos de RPG e Worldbuilding -->
     <section id="projetos-rpg" class="viewport-section border-bottom">
         <div class="container">
             <h2 class="h3 fw-bold mb-4">Game Design, Worldbuilding e Sistemas</h2>
             <div class="row g-4">
-
-                <!-- Card 1: Campanha O Último Clarão -->
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
@@ -157,7 +147,6 @@
                     </div>
                 </div>
 
-                <!-- Card 2: Raças Autorais D&D 5e -->
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
@@ -170,7 +159,6 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Sistema MestreDesk -->
                 <div class="col-md-4">
                     <div class="card h-100">
                         <div class="card-body">
@@ -182,12 +170,10 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Contato e Redes Sociais -->
     <footer id="contato" class="py-5">
         <div class="container">
             <div class="row align-items-center pb-4">
@@ -197,108 +183,22 @@
                 </div>
                 <div class="col-md-6 text-md-end">
                     <a href="mailto:daniellleite100@gmail.com" class="btn btn-outline-tavern me-2">E-mail</a>
-                    <a href="https://github.com/Daniell-Leite" target="_blank" class="btn btn-outline-tavern me-2">GitHub</a>
-                    <a href="https://www.linkedin.com/in/daniell-leite/" target="_blank" class="btn btn-outline-tavern">LinkedIn</a>
+                    <a href="https://github.com/Daniell-Leite" target="_blank" rel="noopener noreferrer" class="btn btn-outline-tavern me-2">GitHub</a>
+                    <a href="https://www.linkedin.com/in/daniell-leite/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-tavern">LinkedIn</a>
                 </div>
             </div>
 
-            <!-- Linha de Direitos Autorais -->
             <div class="border-top pt-4 text-center text-body-secondary small">
                 <p class="mb-0">
                     &copy; 2026 - Todos os Direitos Reservados :: Desenvolvido por: 
-                    <a class="text-decoration-none fw-semibold" style="color: var(--tavern-accent);">Daniell Leite</a>
+                    <span class="fw-semibold text-tavern">Daniell Leite</span>
                 </p>
             </div>
         </div>
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
-        // 1. Alternância entre Tema Claro e Escuro
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const htmlElement = document.documentElement;
-
-        themeToggleBtn.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-bs-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            htmlElement.setAttribute('data-bs-theme', newTheme);
-            themeToggleBtn.textContent = newTheme === 'dark' ? 'Tema: Escuro' : 'Tema: Claro';
-        });
-
-        // 2. Animação de Fogo no Mouse (Restrita à Hero)
-        const heroSection = document.getElementById('hero-section');
-        const canvas = document.getElementById('fire-canvas');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-
-        function resizeCanvas() {
-            canvas.width = heroSection.offsetWidth;
-            canvas.height = heroSection.offsetHeight;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        class FireParticle {
-            constructor(x, y) {
-                this.x = x + (Math.random() - 0.5) * 14;
-                this.y = y + (Math.random() - 0.5) * 10;
-                this.size = Math.random() * 8 + 4;
-                this.speedY = Math.random() * -1.8 - 0.6; // Sobe como chama
-                this.speedX = (Math.random() - 0.5) * 1.2;
-                this.life = 1.0;
-                this.decay = Math.random() * 0.03 + 0.02;
-                
-                // Tons pastéis de chama (âmbar, terracota e dourado suave)
-                const colors = [
-                    '235, 156, 110', // Laranja pastel
-                    '217, 114, 91',  // Terracota suave
-                    '245, 203, 134'  // Amarelo vela pastel
-                ];
-                this.color = colors[Math.floor(Math.random() * colors.length)];
-            }
-
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-                this.size *= 0.96;
-                this.life -= this.decay;
-            }
-
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(${this.color}, ${this.life * 0.65})`;
-                ctx.fill();
-            }
-        }
-
-        // Captura o movimento do mouse APENAS dentro da Hero
-        heroSection.addEventListener('mousemove', (e) => {
-            const rect = heroSection.getBoundingClientRect();
-            const mouseX = e.clientX - rect.left;
-            const mouseY = e.clientY - rect.top;
-
-            for (let i = 0; i < 3; i++) {
-                particles.push(new FireParticle(mouseX, mouseY));
-            }
-        });
-
-        function animateFire() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
-
-                if (particles[i].life <= 0 || particles[i].size <= 0.5) {
-                    particles.splice(i, 1);
-                    i--;
-                }
-            }
-            requestAnimationFrame(animateFire);
-        }
-
-        animateFire();
-    </script>
+    <script src="js/theme.js"></script>
+    <script src="js/fire-particles.js"></script>
 </body>
 </html>
