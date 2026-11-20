@@ -112,11 +112,11 @@ body {
 }
 
 #projetos-dev {
-    min-height: 75vh; 
+    min-height: 55vh; 
 }
 
 #projetos-rpg {
-    min-height: 75vh; /* Espaço confortável para os 3 cards de worldbuilding */
+    min-height: 55vh; /* Espaço confortável para os 3 cards de worldbuilding */
 }
 /* Ajuste para rolagem suave e para a navbar fixa não cobrir o título da seção */
 html {
