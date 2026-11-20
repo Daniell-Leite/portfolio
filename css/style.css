@@ -158,3 +158,13 @@ html {
     background-color: var(--tavern-card-bg);
     clip-path: path('M 151 6 C 170 68, 248 112, 267 193 C 286 275, 228 352, 151 352 C 74 352, 16 275, 35 193 C 49 135, 93 106, 108 68 C 113 96, 127 110, 132 86 C 137 52, 142 29, 151 6 Z');
 }
+
+.text-tavern {
+    color: var(--tavern-accent);
+}
+
+.badge-tavern {
+    color: var(--tavern-accent);
+    border: 1px solid var(--tavern-accent);
+    background-color: transparent;
+}
