@@ -65,51 +65,96 @@ body {
     color: #fffaf5;
 }
 
-/* Configuração da Hero para conter o fogo do mouse */
 #hero-section {
-    position: relative;
-    overflow: hidden; /* Garante que as partículas não vazem da Hero */
+    position: relative !important;
+    overflow: hidden;
 }
 
 #fire-canvas {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0; /* Equivalente a top: 0; right: 0; bottom: 0; left: 0; */
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Permite clicar nos botões normalmente por cima do fogo */
+    pointer-events: none;
     z-index: 1;
 }
 
 #hero-section .container {
     position: relative;
-    z-index: 2; /* Mantém o texto acima das partículas de fogo */
+    z-index: 2;
 }
 
-/* Seções com tamanho mínimo da viewport */
+/* Seções com altura reduzida da viewport (ex: 75% da tela) */
 .viewport-section {
-    min-height: calc(100vh - 56px); /* 100% da tela menos a altura da navbar */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
+/* Mantém apenas a centralização e o espaçamento padrão */
+.viewport-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+/* Altura individual de cada seção */
+#hero-section {
+    min-height: 100vh; 
+}
+
+#sobre {
+    min-height: 50vh; 
+}
+
+#projetos-dev {
+    min-height: 75vh; 
+}
+
+#projetos-rpg {
+    min-height: 75vh; /* Espaço confortável para os 3 cards de worldbuilding */
+}
 /* Ajuste para rolagem suave e para a navbar fixa não cobrir o título da seção */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 56px;
 }
 
-/* Moldura da foto na Hero */
-.hero-photo-frame {
-    max-width: 340px;
+/* Wrapper que cria o brilho/contorno externo da chama */
+.hero-flame-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 310px;
+    height: 360px;
+    /* drop-shadow acompanha exatamente o recorte do clip-path */
+    filter: drop-shadow(0 0 12px rgba(217, 130, 91, 0.45));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hero-flame-wrapper:hover {
+    transform: translateY(-4px);
+    filter: drop-shadow(0 6px 18px rgba(217, 130, 91, 0.65));
+}
+
+/* Borda externa em formato de chama */
+.hero-flame-border {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    height: 100%;
+    background: linear-gradient(180deg, #f5cb86 0%, var(--tavern-accent) 100%);
+    padding: 4px; /* Espessura da borda da chama */
+    clip-path: path('M 155 0 C 175 65, 255 110, 275 195 C 295 280, 235 360, 155 360 C 75 360, 15 280, 35 195 C 50 135, 95 105, 110 65 C 115 95, 130 110, 135 85 C 140 50, 145 25, 155 0 Z');
+}
+
+/* A imagem recortada exatamente no mesmo molde interno */
+.hero-photo-flame {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid var(--tavern-accent);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    object-position: center top; /* Mantém o rosto bem enquadrado na parte larga da chama */
     background-color: var(--tavern-card-bg);
+    clip-path: path('M 151 6 C 170 68, 248 112, 267 193 C 286 275, 228 352, 151 352 C 74 352, 16 275, 35 193 C 49 135, 93 106, 108 68 C 113 96, 127 110, 132 86 C 137 52, 142 29, 151 6 Z');
 }
