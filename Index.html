@@ -8,7 +8,6 @@
     <title>Portfólio | Daniell Leite</title>
 </head>
 <body>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg border-bottom sticky-top">
         <div class="container">
@@ -40,12 +39,14 @@
         </div>
     </nav>
 
-    <!-- Hero com Animação de Fogo no Mouse -->
-    <header id="hero-section" class="py-5 border-bottom">
+    <!-- Hero com Tamanho da Viewport e Foto à Direita -->
+    <header id="hero-section" class="viewport-section border-bottom">
         <canvas id="fire-canvas"></canvas>
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-lg-8">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                
+                <!-- Coluna da Esquerda: Texto -->
+                <div class="col-lg-7">
                     <p class="text-uppercase fw-semibold mb-2" style="color: var(--tavern-accent);">
                         Ciência da Computação & Game Design
                     </p>
@@ -58,12 +59,18 @@
                         <a href="#contato" class="btn btn-outline-tavern">Entrar em Contato</a>
                     </div>
                 </div>
+
+                <!-- Coluna da Direita: Sua Foto -->
+                <div class="col-lg-5 text-center">
+                    <img src="img/daniell.jpg" alt="Foto de Daniell Leite" class="hero-photo-frame">
+                </div>
+
             </div>
         </div>
     </header>
 
     <!-- Quem sou e Experiências -->
-    <section id="sobre" class="py-5 border-bottom">
+    <section id="sobre" class="viewport-section border-bottom">
         <div class="container">
             <h2 class="h3 fw-bold mb-4">Sobre Mim e Experiências</h2>
             <div class="row g-4">
@@ -84,7 +91,7 @@
     </section>
 
     <!-- Projetos de Desenvolvimento -->
-    <section id="projetos-dev" class="py-5 border-bottom">
+    <section id="projetos-dev" class="viewport-section border-bottom">
         <div class="container">
             <h2 class="h3 fw-bold mb-4">Projetos de Desenvolvimento e Ferramentas</h2>
             <div class="row g-4">
@@ -122,7 +129,7 @@
     </section>
 
     <!-- Projetos de RPG e Worldbuilding -->
-    <section id="projetos-rpg" class="py-5 border-bottom">
+    <section id="projetos-rpg" class="viewport-section border-bottom">
         <div class="container">
             <h2 class="h3 fw-bold mb-4">Game Design, Worldbuilding e Sistemas</h2>
             <div class="row g-4">

@@ -85,3 +85,31 @@ body {
     position: relative;
     z-index: 2; /* Mantém o texto acima das partículas de fogo */
 }
+
+/* Seções com tamanho mínimo da viewport */
+.viewport-section {
+    min-height: calc(100vh - 56px); /* 100% da tela menos a altura da navbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* Ajuste para rolagem suave e para a navbar fixa não cobrir o título da seção */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 56px;
+}
+
+/* Moldura da foto na Hero */
+.hero-photo-frame {
+    max-width: 340px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--tavern-accent);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    background-color: var(--tavern-card-bg);
+}
