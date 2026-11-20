@@ -1,0 +1,160 @@
+/* Tema Claro: Pergaminho Pastel e Madeira Clara */
+[data-bs-theme="light"] {
+    --bs-body-bg: #f6efe4;           /* Pergaminho suave */
+    --bs-body-color: #3d2e24;        /* Tinta sépia escura */
+    --bs-secondary-color: #6e5849;   /* Marrom acinzentado pastel */
+    --bs-border-color: #dfd1be;      /* Borda de papel envelhecido */
+    --bs-tertiary-bg: #ede2d2;       /* Fundo da navbar/cards */
+    --tavern-accent: #c86d51;        /* Terracota / Brasa pastel */
+    --tavern-accent-hover: #b3593e;
+    --tavern-card-bg: #fbf7f0;
+}
+
+/* Tema Escuro: Taverna à Luz de Vela */
+[data-bs-theme="dark"] {
+    --bs-body-bg: #231c18;           /* Madeira escura fosca */
+    --bs-body-color: #e8dccb;        /* Creme suave */
+    --bs-secondary-color: #b5a391;   /* Bege acinzentado */
+    --bs-border-color: #3b2f28;      /* Divisória de carvalho */
+    --bs-tertiary-bg: #1c1613;       /* Fundo da navbar */
+    --tavern-accent: #d9825b;        /* Âmbar / Chama pastel */
+    --tavern-accent-hover: #e59470;
+    --tavern-card-bg: #2b221d;
+}
+
+/* Aplicação das variáveis nos componentes */
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background-color: var(--bs-tertiary-bg) !important;
+}
+
+.card {
+    background-color: var(--tavern-card-bg);
+    border-color: var(--bs-border-color);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    border-color: var(--tavern-accent);
+}
+
+/* Botões personalizados no tom da taverna */
+.btn-tavern {
+    background-color: var(--tavern-accent);
+    color: #fffaf5;
+    border: none;
+}
+
+.btn-tavern:hover {
+    background-color: var(--tavern-accent-hover);
+    color: #fffaf5;
+}
+
+.btn-outline-tavern {
+    color: var(--tavern-accent);
+    border-color: var(--tavern-accent);
+}
+
+.btn-outline-tavern:hover {
+    background-color: var(--tavern-accent);
+    color: #fffaf5;
+}
+
+#hero-section {
+    position: relative !important;
+    overflow: hidden;
+}
+
+#fire-canvas {
+    position: absolute;
+    inset: 0; /* Equivalente a top: 0; right: 0; bottom: 0; left: 0; */
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Seções com altura reduzida da viewport (ex: 75% da tela) */
+.viewport-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+/* Mantém apenas a centralização e o espaçamento padrão */
+.viewport-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+/* Altura individual de cada seção */
+#hero-section {
+    min-height: 100vh; 
+}
+
+#sobre {
+    min-height: 50vh; 
+}
+
+#projetos-dev {
+    min-height: 55vh; 
+}
+
+#projetos-rpg {
+    min-height: 55vh; /* Espaço confortável para os 3 cards de worldbuilding */
+}
+/* Ajuste para rolagem suave e para a navbar fixa não cobrir o título da seção */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 56px;
+}
+
+/* Wrapper que cria o brilho/contorno externo da chama */
+.hero-flame-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 310px;
+    height: 360px;
+    /* drop-shadow acompanha exatamente o recorte do clip-path */
+    filter: drop-shadow(0 0 12px rgba(217, 130, 91, 0.45));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hero-flame-wrapper:hover {
+    transform: translateY(-4px);
+    filter: drop-shadow(0 6px 18px rgba(217, 130, 91, 0.65));
+}
+
+/* Borda externa em formato de chama */
+.hero-flame-border {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #f5cb86 0%, var(--tavern-accent) 100%);
+    padding: 4px; /* Espessura da borda da chama */
+    clip-path: path('M 155 0 C 175 65, 255 110, 275 195 C 295 280, 235 360, 155 360 C 75 360, 15 280, 35 195 C 50 135, 95 105, 110 65 C 115 95, 130 110, 135 85 C 140 50, 145 25, 155 0 Z');
+}
+
+/* A imagem recortada exatamente no mesmo molde interno */
+.hero-photo-flame {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* Mantém o rosto bem enquadrado na parte larga da chama */
+    background-color: var(--tavern-card-bg);
+    clip-path: path('M 151 6 C 170 68, 248 112, 267 193 C 286 275, 228 352, 151 352 C 74 352, 16 275, 35 193 C 49 135, 93 106, 108 68 C 113 96, 127 110, 132 86 C 137 52, 142 29, 151 6 Z');
+}
